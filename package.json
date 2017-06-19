@@ -1,0 +1,25 @@
+{
+	"name": "liststyletype-formatter",
+	"version": "1.0.0",
+	"description": "JavaScript number formatter matching CSS list-style-type formats",
+	"main": "lib/main.js",
+	"dependencies": {},
+	"devDependencies": {
+		"should": ">=11.2.1"
+	},
+	"scripts": {
+		"build": "mkdir -p browsers && browserify lib/main.js | uglifyjs > browsers/liststyletype-formatter.js",
+		"test": "mocha test/*.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/matthias-christen/liststyletype-formatter.git"
+	},
+	"keywords": [
+		"number formatter",
+		"list-style-type",
+		"list-style-type in JavaScript"
+	],
+	"author": "Matthias Christen",
+	"readmeFilename": "README.md"
+}

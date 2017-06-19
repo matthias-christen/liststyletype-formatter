@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>list-style-type formatter</title>
+		<script src="../browsers/liststyletype-formatter.js"></script>
+	</head>
+	<body>
+		<h1>list-style-type formatter</h1>
+		<script>
+			function add(n, fmt)
+			{
+				var elt = document.createElement('div');
+				elt.textContent = ListStyleTypeFormatter.format(n, fmt) + ' [' + fmt + ': ' + n + ']';
+				document.body.append(elt);
+			}
+
+			add(1, 'lower-roman');
+			add(2, 'armenian');
+			add(3, 'georgian');
+			add(4, 'ethiopic-numeric');
+			add(5, 'hiragana');
+			add(6, 'korean-hangul-formal');
+			add(7, 'lao');
+			add(8, 'persian');
+			add(9, 'tibetan');
+			add(10, 'trad-chinese-formal');
+		</script>
+	</body>
+</html>
