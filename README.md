@@ -12,6 +12,7 @@ to the CSS declaration ```list-style-type: lower-roman```), use
 // Node.js
 var ListStyleTypeFormatter = require('liststyletype-formatter');
 console.log(ListStyleTypeFormatter.format(1234, 'lower-roman'));
+// should output: mccxxxiv
 ```
 
 ```html
@@ -19,6 +20,7 @@ console.log(ListStyleTypeFormatter.format(1234, 'lower-roman'));
 <script src="liststyletype-formatter.js"></script>
 <script>
 	console.log(ListStyleTypeFormatter.format(1234, 'lower-roman'));
+	// should output: mccxxxiv
 </script>
 ```
 
@@ -92,7 +94,18 @@ npm install liststyletype-formatter
 
 ## Building and Testing
 
-To build a browser version of the library, type
+If you plan to use this package just from Node.js, there is no need to do a build. To build a browser version of the library, first make sure that you have **browserify** and **uglifyjs** installed (you can check this by typing ```browserify --version``` and ```uglifyjs --version``` on the command line.
+If needed (i.e., you get something like "command not found"), you can install them with
+
+```bash
+# install browserify
+npm install -g browserify
+
+# installl UglifyJS
+npm install -g uglifyjs
+```
+
+Once you have these build tools installed, to run the build, type
 
 ```
 npm run build
@@ -103,6 +116,7 @@ To run the tests, type
 ```
 npm test
 ```
+This requires that you have the package's dev dependencies installed, which you can install by typing ```npm install```.
 
 ## License
 
